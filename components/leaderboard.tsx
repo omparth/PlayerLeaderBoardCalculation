@@ -49,7 +49,6 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center py-12 px-4">
 
-      {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
@@ -58,14 +57,11 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
         }}
       />
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
 
-      {/* Content */}
       <div className="relative z-20 w-full max-w-3xl mx-auto">
         <div className="rounded-2xl bg-black/30 backdrop-blur-lg border border-white/10 shadow-2xl overflow-hidden">
 
-          {/* Header */}
           <div className="p-6 md:p-8">
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -83,7 +79,6 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
               </div>
             </div>
 
-            {/* Controls */}
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
               <Button
                 type="button"
@@ -102,7 +97,6 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
             </div>
           </div>
 
-          {/* Player List */}
           <div className="p-4 md:p-6 space-y-4">
             {displayedScores.length > 0 ? (
               displayedScores.map((player, index) => {
@@ -116,7 +110,6 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
                       isTopThree ? "border-l-4 border-yellow-400" : ""
                     }`}
                   >
-                    {/* Rank & Name */}
                     <div className="flex items-center gap-4">
                       <div
                         className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
@@ -132,7 +125,6 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
                       </div>
                     </div>
 
-                    {/* Score */}
                     <div className="text-right">
                       <p className="text-2xl font-extrabold text-white">{player.score}</p>
                       <p className="text-xs text-white/60">MVP Points</p>
@@ -147,7 +139,6 @@ export default function Leaderboard({ players, events }: LeaderboardProps) {
             )}
           </div>
 
-          {/* Footer */}
           {isFiltered && (
             <div className="p-4 md:p-5 bg-white/10 border-t border-white/20 text-sm text-white/80">
               Showing {displayedScores.length} of {allScores.length} players with 20+ points — top{" "}
