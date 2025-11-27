@@ -1,5 +1,3 @@
-// app/page.tsx
-
 import Leaderboard from "@/components/leaderboard"
 import type { Player, Event } from "@/lib/calculate-mvp"
 import { promises as fs } from "fs"
