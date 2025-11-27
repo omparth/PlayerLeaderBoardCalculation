@@ -14,7 +14,6 @@ async function fetchData() {
 
     return { players, events }
   } catch (error) {
-    // more descriptive log
     console.error("Error fetching (reading) data from public/*.json:", error)
     return { players: [], events: [] }
   }
